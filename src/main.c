@@ -156,7 +156,7 @@ int main(int argc, char* argv[]) {
         char path[256];
         printf("==================[LyricsMan]==================\n");
         printf("- by artikruss777");
-        printf("- v1.0.0");
+        printf("- v1.1.0");
         printf("Enter path to config: ");
         scanf("%255s", path);
         printf("\n");
