@@ -65,7 +65,7 @@ char* read_file(char *path) {
 }
 
 
-void print_string(const char *str, int delay, int after_delay, bool new_str, char *color) {
+void print_string(const char *str, double delay, double after_delay, bool new_str, char *color) {
     printf(color);
     for (int i = 0; str[i] != '\0'; i++)
     {
@@ -111,8 +111,8 @@ void run_config(const char *config) {
             if (strcmp(args[0],"print") == 0) {
                 if (counter >= 5) {
                     char *str = args[1];
-                    int delay = atoi(args[2]);
-                    int after_delay = atoi(args[3]);
+                    double delay = atof(args[2]);
+                    double after_delay = atof(args[3]);
                     bool new_line = (strcmp(args[4], "true") == 0 || strcmp(args[4], "1") == 0);
                     char *color = args[5];
                     
@@ -156,7 +156,7 @@ int main(int argc, char* argv[]) {
         char path[256];
         printf("==================[LyricsMan]==================\n");
         printf("- by artikruss777");
-        printf("- v1.1.0");
+        printf("- v1.1.1");
         printf("Enter path to config: ");
         scanf("%255s", path);
         printf("\n");
