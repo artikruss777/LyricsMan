@@ -44,6 +44,7 @@ Enter path to config: lyrics.txt
 ## 🚀 Installation
 
 ### Windows (MSYS2/MinGW GCC)
+
 ```bash
 git clone https://github.com/artikruss777/lyricsman.git
 cd lyricsman
@@ -52,6 +53,7 @@ gcc lyricsman.c -o lyricsman.exe
 ```
 
 ### Linux / macOS
+
 ```bash
 git clone https://github.com/artikruss777/lyricsman.git
 cd lyricsman
@@ -60,6 +62,7 @@ gcc lyricsman.c -o lyricsman
 ```
 
 ### Android (Termux)
+
 ```bash
 pkg install gcc
 git clone https://github.com/artikruss777/lyricsman.git
@@ -77,26 +80,35 @@ Create a `.txt` file (e.g., `song.txt`) with commands separated by new lines. Ea
 ### Available Commands
 
 #### 1. `print` — Animated text output
+
 ```
 print|text|typing_delay|pause_after|newline|color
 ```
 
-| Argument | Description | Example |
-|----------|-------------|---------|
-| `text` | The text to display | `Hello world!` |
-| `typing_delay` | Seconds between each letter (decimal) | `0.05` |
-| `pause_after` | Seconds to pause after finishing | `1` |
-| `newline` | Add newline after? (`true`/`false`) | `true` |
-| `color` | Text color (`RED`/`GREEN`/`YELLOW`/`BLUE`/`RESET`) | `RED` |
+
+| Argument       | Description                                        | Example        |
+| -------------- | -------------------------------------------------- | -------------- |
+| `text`         | The text to display                                | `Hello world!` |
+| `typing_delay` | Seconds between each letter (decimal)              | `0.05`         |
+| `pause_after`  | Seconds to pause after finishing                   | `1`            |
+| `newline`      | Add newline after? (`true`/`false`)                | `true`         |
+| `color`        | Text color (`RED`/`GREEN`/`YELLOW`/`BLUE`/`RESET`) | `RED`          |
 
 #### 2. `rawprint` — Instant text output
+
 ```
 rawprint|text
 ```
 
 #### 3. `wait` — Pause execution
+
 ```
 wait|seconds
+```
+
+#### 4. `clear` - Clean screen
+```
+clear
 ```
 
 ---
@@ -116,12 +128,15 @@ rawprint|Goodbye World!
 ## 🎯 Usage
 
 ### Method 1: Interactive mode
+
 ```bash
 ./lyricsman
 ```
+
 Then enter your config file path when prompted.
 
 ### Method 2: Direct file argument
+
 ```bash
 ./lyricsman mysong.txt
 ```
@@ -130,9 +145,10 @@ Then enter your config file path when prompted.
 
 ## 🧪 Tested Platforms
 
-| Platform | Compiler | Status |
-|----------|----------|--------|
-| Windows 11 | MSYS2 GCC | ✅ Working |
+
+| Platform    | Compiler   | Status     |
+| ----------- | ---------- | ---------- |
+| Windows 11  | MSYS2 GCC  | ✅ Working |
 | Android 13+ | Termux GCC | ✅ Working |
 
 ---
@@ -140,6 +156,7 @@ Then enter your config file path when prompted.
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
+
 - Report bugs
 - Suggest features
 - Submit pull requests
@@ -148,7 +165,7 @@ Contributions are welcome! Feel free to:
 
 ## 📞 Contact
 
-**Developer:** artikruss777  
+**Developer:** artikruss777
 **Telegram:** [t.me/artikruss777](https://t.me/artikruss777)
 
 ---

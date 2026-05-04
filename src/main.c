@@ -7,6 +7,7 @@
     #include <Windows.h>
     #define sleep(sec) Sleep((sec))
     #define _CRT_SECURE_NO_WARNINGS
+    
 #else
     #include <time.h>
     void ms_sleep(int ms) {
@@ -22,6 +23,14 @@
 #define YELLOW "\033[33m"
 #define BLUE  "\033[34m"
 #define RESET "\033[0m"
+
+void clear() {
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clean");
+    #endif
+}
 
 char* read_file(char *path) {
     FILE *fp = fopen(path, "r");
@@ -121,18 +130,21 @@ void run_config(const char *config) {
                     printf("Warning: Invalid config line (needs at least 5 fields): %s\n", line);
                 }
             }
-            else if (strcmp(args[0], "rawprint") == 0) {
+            if (strcmp(args[0], "rawprint") == 0) {
                 printf("%s", args[1]);
                 printf("\n");
             }
             
-            else if (strcmp(args[0], "wait") == 0) {
+            if (strcmp(args[0], "wait") == 0) {
                 if (counter >= 2) {
                     int wait_seconds = atoi(args[1]);
                     sleep(wait_seconds);
                 } else {
                     printf("Warning: wait needs a time argument\n");
                 }
+            }
+            if (strcmp(args[0], "clear") == 0) {
+                clear();
             }
         }line = strtok_r(NULL, "\n", &saveptr1);
     }
